@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0;net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <Description>
+      It's support the config from web API, Just like to do this: builder.Configuration.AddWebConfig(service_url, accessToken); Then you can get the config from web api. The service_url is only the base url of the web api, like http://localhost:5000/, It must has route like api/config. The accessToken is the token of the web api.
+    </Description>
+    <!-- NuGet package metadata -->
+    <PackageId>Microsoft.Extensions.Configuration.WebConfigExtensions</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>WebConfig Team</Authors>
+    <Company>WebConfig</Company>
+    <PackageTags>configuration;web;webconfig;extensions;aspnetcore</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/doeasier/webconfig</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/doeasier/webconfig</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>false</IncludeSymbols>
+    <!-- place nupkg in repository nupkgs folder -->
+    <PackageOutputPath>$(SolutionDir)nupkgs</PackageOutputPath>
+  </PropertyGroup>
+
+  <!-- Package references only for supported target frameworks -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.10" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.10" />
+  </ItemGroup>
+
+</Project>
