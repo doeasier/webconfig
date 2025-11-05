@@ -9,7 +9,7 @@
       It's support the config from web API, Just like to do this: builder.Configuration.AddWebConfig(service_url, accessToken); Then you can get the config from web api. The service_url is only the base url of the web api, like http://localhost:5000/, It must has route like api/config. The accessToken is the token of the web api.
     </Description>
     <!-- NuGet package metadata -->
-    <PackageId>Microsoft.Extensions.Configuration.WebConfigExtensions</PackageId>
+    <PackageId>Jaine.Extensions.Configuration.WebConfigExtensions</PackageId>
     <Version>1.0.0</Version>
     <Authors>WebConfig Team</Authors>
     <Company>WebConfig</Company>
